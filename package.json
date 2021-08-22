@@ -33,6 +33,7 @@
     "react-helmet": "^6.1.0"
   },
   "devDependencies": {
+    "@types/node": "^16.7.1",
     "prettier": "2.3.2"
   }
 }
