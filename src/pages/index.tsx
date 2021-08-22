@@ -1,12 +1,12 @@
-import React from "react";
+import { VFC } from "react";
 import { css } from "@emotion/react";
-import logo from "../images/logo.png";
+import Layout from "../components/Layout";
+import logo from "../images/fishnett-logo.png";
 
 // styles
 const pageStyles = css`
   color: #232129;
   padding: 96;
-  font-family: -apple-system, Roboto, sans-serif, serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,13 +16,14 @@ const pageStyles = css`
   color: #333;
 `;
 
-// markup
-const IndexPage = () => {
+const IndexPage: VFC = () => {
   return (
-    <main css={pageStyles}>
-      <img src={logo} />
-      <h1>Watch this space</h1>
-    </main>
+    <Layout>
+      <main css={pageStyles}>
+        <img src={logo} />
+        <h1>Watch this space</h1>
+      </main>
+    </Layout>
   );
 };
 
