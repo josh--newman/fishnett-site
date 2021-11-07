@@ -1,5 +1,6 @@
 import { VFC } from "react";
 import { css } from "@emotion/react";
+import { Link } from "gatsby";
 
 import Spacer from "./Spacer";
 import boatImg from "../images/fishnett-logo-light.svg";
@@ -12,13 +13,15 @@ const logoContainerStyles = css`
 
 const HeaderLogo: VFC = () => {
   return (
-    <div css={logoContainerStyles}>
-      <img width="100px" src={boatImg} alt="fishnett logo" />
-      <Spacer width={10} />
-      <div>
-        <img src={fishnettLogo} alt="Fishnett" />
+    <Link to="/">
+      <div css={logoContainerStyles}>
+        <img width="100px" src={boatImg} alt="fishnett logo" />
+        <Spacer width={10} />
+        <div>
+          <img src={fishnettLogo} alt="Fishnett" />
+        </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
