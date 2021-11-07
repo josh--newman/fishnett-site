@@ -7,7 +7,7 @@ import Spacer from "./Spacer";
 
 const headerStyles = css`
   width: 100%;
-  background-color: #153e56;
+  background-color: var(--dark-blue);
   min-height: 100px;
   padding: 20px;
 `;

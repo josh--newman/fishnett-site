@@ -16,6 +16,11 @@ const Layout: FC = ({ children }) => {
     <Fragment>
       <Global
         styles={css`
+          :root {
+            --dark-blue: #153e56;
+            --white: #ffffff;
+          }
+
           *,
           *::before,
           *::after {
