@@ -1,5 +1,6 @@
 import { VFC } from "react";
 import { css } from "@emotion/react";
+import { Link } from "gatsby";
 
 const containerStyles = css`
   width: 100%;
@@ -33,42 +34,67 @@ const navStyles = css`
 const bookDemoStyles = css`
   border: 1px solid var(--white);
   border-radius: 5px;
-  padding: 10px 20px;
-  text-decoration: none;
-  :link,
-  :visited {
-    color: var(--white);
-  }
+  cursor: pointer;
+
   :hover,
   :focus {
     background-color: var(--white);
-    color: var(--dark-blue);
+  }
+
+  a {
+    display: block;
+    padding: 10px 20px;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    :link,
+    :visited {
+      color: var(--white);
+    }
+    :hover,
+    :focus {
+      color: var(--dark-blue);
+    }
   }
 `;
+
+const activeLinkStyles = {
+  textDecoration: "underline",
+};
 
 const Nav: VFC = () => {
   return (
     <nav css={containerStyles}>
       <ul css={navStyles}>
         <li>
-          <a href="/product">Product</a>
+          <Link activeStyle={activeLinkStyles} to="/product">
+            Product
+          </Link>
         </li>
         <li>
-          <a href="/setup">Setup</a>
+          <Link activeStyle={activeLinkStyles} to="/setup">
+            Setup
+          </Link>
         </li>
         <li>
-          <a href="/solutions">Solutions</a>
+          <Link activeStyle={activeLinkStyles} to="/solutions">
+            Solutions
+          </Link>
         </li>
         <li>
-          <a href="/support">Support</a>
+          <Link activeStyle={activeLinkStyles} to="/support">
+            Support
+          </Link>
         </li>
         <li>
-          <a href="/learn">Learn</a>
+          <Link activeStyle={activeLinkStyles} to="/learn">
+            Learn
+          </Link>
         </li>
       </ul>
-      <a css={bookDemoStyles} href="/book-a-demo">
-        Book a demo
-      </a>
+      <div role="button" tabIndex={0} css={bookDemoStyles}>
+        <Link to="/book-a-demo">Book a demo</Link>
+      </div>
     </nav>
   );
 };
