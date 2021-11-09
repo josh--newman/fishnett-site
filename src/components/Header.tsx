@@ -13,7 +13,7 @@ const headerStyles = css`
 `;
 
 const headerContentStyles = css`
-  max-width: 1200px;
+  max-width: var(--max-page-width);
   margin: 0 auto;
   display: flex;
 `;

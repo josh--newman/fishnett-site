@@ -17,6 +17,7 @@ const Layout: FC = ({ children }) => {
       <Global
         styles={css`
           :root {
+            --max-page-width: 1200px;
             --dark-blue: #153e56;
             --white: #ffffff;
           }
@@ -47,10 +48,10 @@ const Layout: FC = ({ children }) => {
           }
         `}
       />
-      <div css={pageContainerStyles}>
+      <main css={pageContainerStyles}>
         <Header />
         {children}
-      </div>
+      </main>
     </Fragment>
   );
 };
