@@ -13,6 +13,7 @@ const containerStyles = css`
   padding: 40px;
   display: flex;
   max-width: var(--max-page-width);
+  margin: 0 auto;
 `;
 
 const heroTextStyles = css`
