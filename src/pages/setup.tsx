@@ -1,12 +1,12 @@
 import { VFC } from "react";
 import Layout from "../components/Layout";
 
-const ProductPage: VFC = () => {
+const SetupPage: VFC = () => {
   return (
     <Layout>
-      <h1>Product</h1>
+      <h1>Setup</h1>
     </Layout>
   );
 };
 
-export default ProductPage;
+export default SetupPage;
