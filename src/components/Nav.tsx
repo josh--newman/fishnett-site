@@ -52,18 +52,13 @@ const Nav: VFC = () => {
           </Link>
         </li>
         <li>
-          <Link activeStyle={activeLinkStyles} to="/solutions">
-            Solutions
-          </Link>
-        </li>
-        <li>
           <Link activeStyle={activeLinkStyles} to="/support">
             Support
           </Link>
         </li>
         <li>
-          <Link activeStyle={activeLinkStyles} to="/learn">
-            Learn
+          <Link activeStyle={activeLinkStyles} to="/contact">
+            Contact
           </Link>
         </li>
       </ul>
