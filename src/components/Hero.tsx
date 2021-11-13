@@ -30,7 +30,7 @@ const Hero: VFC = () => {
     <section css={wrapperStyles}>
       <div css={containerStyles}>
         <div css={heroTextStyles}>
-          <Text type="sml-heading" tag="h3">
+          <Text type="xs-heading" tag="h3">
             Automate federal & state compliance reporting
           </Text>
           <Spacer height={10} />

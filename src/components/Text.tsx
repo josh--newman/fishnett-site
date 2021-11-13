@@ -15,6 +15,11 @@ const tagStyles = (type: Props["type"]) => {
       `;
     case "sml-heading":
       return css`
+        font-size: 24px;
+        font-weight: 600;
+      `;
+    case "xs-heading":
+      return css`
         font-size: 16px;
         font-weight: 700;
         text-transform: uppercase;
@@ -33,7 +38,13 @@ const tagStyles = (type: Props["type"]) => {
 };
 
 interface Props {
-  type: "lg-heading" | "md-heading" | "sml-heading" | "body" | "subtitle";
+  type:
+    | "lg-heading"
+    | "md-heading"
+    | "sml-heading"
+    | "xs-heading"
+    | "body"
+    | "subtitle";
   tag: "h1" | "h2" | "h3" | "p";
 }
 

@@ -7,6 +7,7 @@ const bookDemoStyles = css`
   border-radius: 5px;
   cursor: pointer;
   min-width: 150px;
+  width: fit-content;
   text-align: center;
 
   :hover,
