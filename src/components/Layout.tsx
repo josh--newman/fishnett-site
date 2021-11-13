@@ -20,6 +20,7 @@ const Layout: FC = ({ children }) => {
             --max-page-width: 1200px;
             --dark-blue: #153e56;
             --white: #ffffff;
+            --light-gray: #c4c4c4;
           }
 
           *,

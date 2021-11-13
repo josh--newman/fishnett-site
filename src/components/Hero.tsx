@@ -30,11 +30,15 @@ const Hero: VFC = () => {
     <section css={wrapperStyles}>
       <div css={containerStyles}>
         <div css={heroTextStyles}>
-          <Text tag="h3">Automate federal & state compliance reporting</Text>
+          <Text type="sml-heading" tag="h3">
+            Automate federal & state compliance reporting
+          </Text>
           <Spacer height={10} />
-          <Text tag="h1">Streamling the modern fishing industry</Text>
+          <Text type="lg-heading" tag="h1">
+            Streamlining the modern fishing industry
+          </Text>
           <Spacer height={10} />
-          <Text tag="p">
+          <Text type="body" tag="p">
             FishNett can create an entire week’s recipient created tax invoices,
             for all your suppliers, in just 30 minutes.
           </Text>
