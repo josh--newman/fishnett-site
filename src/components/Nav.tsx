@@ -2,6 +2,8 @@ import { VFC } from "react";
 import { css } from "@emotion/react";
 import { Link } from "gatsby";
 
+import LinkButton from "./LinkButton";
+
 const containerStyles = css`
   width: 100%;
   color: var(--white);
@@ -27,33 +29,6 @@ const navStyles = css`
       :hover {
         text-decoration: underline;
       }
-    }
-  }
-`;
-
-const bookDemoStyles = css`
-  border: 1px solid var(--white);
-  border-radius: 5px;
-  cursor: pointer;
-
-  :hover,
-  :focus {
-    background-color: var(--white);
-  }
-
-  a {
-    display: block;
-    padding: 10px 20px;
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-    :link,
-    :visited {
-      color: var(--white);
-    }
-    :hover,
-    :focus {
-      color: var(--dark-blue);
     }
   }
 `;
@@ -92,9 +67,7 @@ const Nav: VFC = () => {
           </Link>
         </li>
       </ul>
-      <div role="button" tabIndex={0} css={bookDemoStyles}>
-        <Link to="/book-a-demo">Book a demo</Link>
-      </div>
+      <LinkButton to="/book-a-demo">Book a demo</LinkButton>
     </nav>
   );
 };

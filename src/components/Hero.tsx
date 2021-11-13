@@ -3,6 +3,7 @@ import { css } from "@emotion/react";
 import Spacer from "./Spacer";
 import heroImage from "../images/hero-image.png";
 import Text from "../components/Text";
+import LinkButton from "./LinkButton";
 
 const wrapperStyles = css`
   background-color: var(--dark-blue);
@@ -20,6 +21,10 @@ const heroTextStyles = css`
   color: var(--white);
 `;
 
+const buttonContainerStyles = css`
+  display: flex;
+`;
+
 const Hero: VFC = () => {
   return (
     <section css={wrapperStyles}>
@@ -33,6 +38,12 @@ const Hero: VFC = () => {
             FishNett can create an entire week’s recipient created tax invoices,
             for all your suppliers, in just 30 minutes.
           </Text>
+          <Spacer height={40} />
+          <div css={buttonContainerStyles}>
+            <LinkButton to="/book-a-demo">Book a demo</LinkButton>
+            <Spacer width={20} />
+            <LinkButton to="/product">Learn more</LinkButton>
+          </div>
         </div>
         <Spacer width={30} />
         <div>
