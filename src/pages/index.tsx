@@ -1,4 +1,5 @@
 import { VFC } from "react";
+import { Helmet } from "react-helmet";
 
 import Layout from "../components/Layout";
 import Hero from "../components/Hero";
@@ -9,6 +10,11 @@ import Features from "../components/Features";
 const IndexPage: VFC = () => {
   return (
     <Layout>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Fishnett | Home</title>
+        <link rel="canonical" href="https://fishnett.co/" />
+      </Helmet>
       <Hero />
       <Highlights />
       <Testimonials />
