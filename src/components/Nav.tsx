@@ -3,6 +3,7 @@ import { css } from "@emotion/react";
 import { Link } from "gatsby";
 
 import LinkButton from "./LinkButton";
+import navItems from "./navItems";
 
 const containerStyles = css`
   width: 100%;
@@ -41,26 +42,15 @@ const Nav: VFC = () => {
   return (
     <nav css={containerStyles}>
       <ul css={navStyles}>
-        <li>
-          <Link activeStyle={activeLinkStyles} to="/product">
-            Product
-          </Link>
-        </li>
-        <li>
-          <Link activeStyle={activeLinkStyles} to="/setup">
-            Setup
-          </Link>
-        </li>
-        <li>
-          <Link activeStyle={activeLinkStyles} to="/support">
-            Support
-          </Link>
-        </li>
-        <li>
-          <Link activeStyle={activeLinkStyles} to="/contact">
-            Contact
-          </Link>
-        </li>
+        {navItems.map((item) => {
+          return (
+            <li>
+              <Link activeStyle={activeLinkStyles} to={item.to}>
+                {item.title}
+              </Link>
+            </li>
+          );
+        })}
       </ul>
       <LinkButton to="/book-a-demo">Book a demo</LinkButton>
     </nav>

@@ -4,6 +4,7 @@ import "@fontsource/open-sans/400.css";
 import "@fontsource/open-sans/700.css";
 
 import Header from "./Header";
+import Footer from "./Footer";
 
 const pageContainerStyles = css`
   display: flex;
@@ -21,6 +22,7 @@ const Layout: FC = ({ children }) => {
             --dark-blue: #153e56;
             --white: #ffffff;
             --light-gray: #c4c4c4;
+            --dark-gray: #2c2c2c;
           }
 
           *,
@@ -52,6 +54,7 @@ const Layout: FC = ({ children }) => {
       <main css={pageContainerStyles}>
         <Header />
         {children}
+        <Footer />
       </main>
     </Fragment>
   );
