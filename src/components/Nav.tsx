@@ -5,15 +5,15 @@ import { Link } from "gatsby";
 import LinkButton from "./LinkButton";
 import navItems from "./navItems";
 
-const containerStyles = css`
+const containerStyles = (theme: Props["theme"]) => css`
   width: 100%;
-  color: var(--white);
+  color: ${theme === "light" ? "var(--dark-blue)" : "var(--white)"};
   display: flex;
   justify-content: space-between;
   align-items: center;
 `;
 
-const navStyles = css`
+const navStyles = (theme: Props["theme"]) => css`
   display: flex;
   list-style: none;
 
@@ -24,7 +24,7 @@ const navStyles = css`
       text-decoration: none;
       :link,
       :visited {
-        color: var(--white);
+        color: ${theme === "light" ? "var(--dark-blue)" : "var(--white)"};
       }
       :focus,
       :hover {
@@ -38,10 +38,14 @@ const activeLinkStyles = {
   textDecoration: "underline",
 };
 
-const Nav: VFC = () => {
+interface Props {
+  theme: "light" | "dark";
+}
+
+const Nav: VFC<Props> = ({ theme }) => {
   return (
-    <nav css={containerStyles}>
-      <ul css={navStyles}>
+    <nav css={containerStyles(theme)}>
+      <ul css={navStyles(theme)}>
         {navItems.map((item) => {
           return (
             <li>
@@ -52,7 +56,9 @@ const Nav: VFC = () => {
           );
         })}
       </ul>
-      <LinkButton to="/book-a-demo">Book a demo</LinkButton>
+      <LinkButton theme={theme} to="/book-a-demo">
+        Book a demo
+      </LinkButton>
     </nav>
   );
 };

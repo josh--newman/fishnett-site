@@ -50,7 +50,7 @@ const Footer: VFC = () => {
     <footer css={wrapperStyles}>
       <div css={containerStyles}>
         <div>
-          <HeaderLogo />
+          <HeaderLogo theme="dark" />
           <Spacer height={10} />
           <Text tag="p" type="subtitle">
             Copyright © {new Date().getFullYear()} Productive Office Australia

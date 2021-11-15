@@ -2,8 +2,8 @@ import { css } from "@emotion/react";
 import { FC } from "react";
 import { Link } from "gatsby";
 
-const bookDemoStyles = css`
-  border: 1px solid var(--white);
+const bookDemoStyles = (theme: Props["theme"]) => css`
+  border: 1px solid ${theme === "light" ? "var(--dark-blue)" : "var(--white)"};
   border-radius: 5px;
   cursor: pointer;
   min-width: 150px;
@@ -12,7 +12,9 @@ const bookDemoStyles = css`
 
   :hover,
   :focus {
-    background-color: var(--white);
+    background-color: ${theme === "light"
+      ? "var(--dark-blue)"
+      : "var(--white)"};
   }
 
   a {
@@ -23,25 +25,26 @@ const bookDemoStyles = css`
     text-decoration: none;
     :link,
     :visited {
-      color: var(--white);
+      color: ${theme === "light" ? "var(--dark-blue)" : "var(--white)"};
     }
     :hover,
     :focus {
-      color: var(--dark-blue);
+      color: ${theme === "light" ? "var(--white)" : "var(--dark-blue)"};
     }
   }
 `;
 
 interface Props {
   to: string;
+  theme: "light" | "dark";
 }
 
-const DemoButton: FC<Props> = ({ children, to }) => {
+const LinkButton: FC<Props> = ({ children, to, theme }) => {
   return (
-    <div role="button" tabIndex={0} css={bookDemoStyles}>
+    <div role="button" tabIndex={0} css={bookDemoStyles(theme)}>
       <Link to={to}>{children}</Link>
     </div>
   );
 };
 
-export default DemoButton;
+export default LinkButton;

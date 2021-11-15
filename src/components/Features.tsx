@@ -76,7 +76,9 @@ const Features: VFC = () => {
             and reports.
           </Text>
           <Spacer height={40} />
-          <LinkButton to="/product">Learn more</LinkButton>
+          <LinkButton theme="dark" to="/product">
+            Learn more
+          </LinkButton>
         </div>
         <ul css={featureListStyles}>
           <FeatureItem

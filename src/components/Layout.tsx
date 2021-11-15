@@ -2,6 +2,7 @@ import { Fragment, FC } from "react";
 import { Global, css } from "@emotion/react";
 import "@fontsource/open-sans/400.css";
 import "@fontsource/open-sans/700.css";
+import "@fontsource/nunito/900.css";
 
 import Header from "./Header";
 import Footer from "./Footer";
@@ -52,7 +53,7 @@ const Layout: FC = ({ children }) => {
         `}
       />
       <main css={pageContainerStyles}>
-        <Header />
+        <Header theme="light" />
         {children}
         <Footer />
       </main>

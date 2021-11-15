@@ -5,9 +5,9 @@ import HeaderLogo from "./HeaderLogo";
 import Nav from "./Nav";
 import Spacer from "./Spacer";
 
-const headerStyles = css`
+const headerStyles = (theme: Props["theme"]) => css`
   width: 100%;
-  background-color: var(--dark-blue);
+  background-color: ${theme === "light" ? "var(--white)" : "var(--dark-blue)"};
   min-height: 100px;
   padding: 20px;
 `;
@@ -18,13 +18,17 @@ const headerContentStyles = css`
   display: flex;
 `;
 
-const Header: VFC = () => {
+interface Props {
+  theme: "light" | "dark";
+}
+
+const Header: VFC<Props> = ({ theme }) => {
   return (
-    <header css={headerStyles}>
+    <header css={headerStyles(theme)}>
       <div css={headerContentStyles}>
-        <HeaderLogo />
+        <HeaderLogo theme={theme} />
         <Spacer width={10} />
-        <Nav />
+        <Nav theme={theme} />
       </div>
     </header>
   );

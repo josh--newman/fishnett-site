@@ -44,9 +44,13 @@ const Hero: VFC = () => {
           </Text>
           <Spacer height={40} />
           <div css={buttonContainerStyles}>
-            <LinkButton to="/book-a-demo">Book a demo</LinkButton>
+            <LinkButton theme="dark" to="/book-a-demo">
+              Book a demo
+            </LinkButton>
             <Spacer width={20} />
-            <LinkButton to="/product">Learn more</LinkButton>
+            <LinkButton theme="dark" to="/product">
+              Learn more
+            </LinkButton>
           </div>
         </div>
         <Spacer width={30} />
