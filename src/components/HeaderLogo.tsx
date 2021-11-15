@@ -3,7 +3,7 @@ import { css } from "@emotion/react";
 import { Link } from "gatsby";
 
 import Spacer from "./Spacer";
-import boatImg from "../images/fishnett-logo-light.svg";
+import boatImg from "../images/fishnett-logo.svg";
 
 const wrapperStyles = (theme: Props["theme"]) => css`
   color: ${theme === "light" ? "var(--dark-blue)" : "var(--white)"};

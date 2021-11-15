@@ -4,17 +4,20 @@ import { Link } from "gatsby";
 
 const bookDemoStyles = (theme: Props["theme"]) => css`
   border: 1px solid ${theme === "light" ? "var(--dark-blue)" : "var(--white)"};
+  background-color: var(--dark-blue);
+  color: var(--white);
   border-radius: 5px;
   cursor: pointer;
   min-width: 150px;
   width: fit-content;
   text-align: center;
 
-  :hover,
-  :focus {
+  :hover {
     background-color: ${theme === "light"
       ? "var(--dark-blue)"
       : "var(--white)"};
+    color: ${theme === "light" ? "var(--white)" : "var(--dark-blue)"};
+    filter: ${theme === "light" ? "brightness(85%)" : "none"};
   }
 
   a {
@@ -25,11 +28,7 @@ const bookDemoStyles = (theme: Props["theme"]) => css`
     text-decoration: none;
     :link,
     :visited {
-      color: ${theme === "light" ? "var(--dark-blue)" : "var(--white)"};
-    }
-    :hover,
-    :focus {
-      color: ${theme === "light" ? "var(--white)" : "var(--dark-blue)"};
+      color: inherit;
     }
   }
 `;
