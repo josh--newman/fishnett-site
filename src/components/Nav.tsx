@@ -31,6 +31,7 @@ const navStyles = (theme: Props["theme"], isOpen: boolean) => css`
     gap: 1em;
     background: hsl(0 0% 0% / 0.75);
     transform: ${isOpen ? "none" : "translateX(100%)"};
+    transition: transform 350ms ease;
 
     @supports (backdrop-filter: blur(1rem)) {
       background: hsl(0 0% 0% / 0.1);
@@ -98,7 +99,7 @@ const Nav: VFC<Props> = ({ theme }) => {
       <button
         css={menuToggleStyles(isOpen)}
         aria-controls="primary-navigation"
-        aria-expanded="false"
+        aria-expanded={isOpen}
         onClick={() => setIsOpen(!isOpen)}
       >
         <span css={menuText}>Menu</span>
