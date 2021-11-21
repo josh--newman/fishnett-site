@@ -40,7 +40,7 @@ interface Props {
 
 const LinkButton: FC<Props> = ({ children, to, theme }) => {
   return (
-    <div role="button" tabIndex={0} css={bookDemoStyles(theme)}>
+    <div role="button" tabIndex={-1} css={bookDemoStyles(theme)}>
       <Link to={to}>{children}</Link>
     </div>
   );

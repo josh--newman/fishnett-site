@@ -3,7 +3,7 @@ import { css } from "@emotion/react";
 
 import HeaderLogo from "./HeaderLogo";
 import Nav from "./Nav";
-import Spacer from "./Spacer";
+import LinkButton from "./LinkButton";
 
 const headerStyles = (theme: Props["theme"]) => css`
   width: 100%;
@@ -16,6 +16,14 @@ const headerContentStyles = css`
   max-width: var(--max-page-width);
   margin: 0 auto;
   display: flex;
+  gap: 10px;
+`;
+
+const navContainerStyles = css`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 `;
 
 interface Props {
@@ -27,8 +35,12 @@ const Header: VFC<Props> = ({ theme }) => {
     <header css={headerStyles(theme)}>
       <div css={headerContentStyles}>
         <HeaderLogo theme={theme} />
-        <Spacer width={10} />
-        <Nav theme={theme} />
+        <div css={navContainerStyles}>
+          <Nav theme={theme} />
+          <LinkButton theme={theme} to="/book-a-demo">
+            Book a demo
+          </LinkButton>
+        </div>
       </div>
     </header>
   );

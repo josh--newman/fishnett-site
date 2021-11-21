@@ -2,7 +2,6 @@ import { VFC } from "react";
 import { css } from "@emotion/react";
 import { Link } from "gatsby";
 
-import LinkButton from "./LinkButton";
 import navItems from "./navItems";
 
 const containerStyles = (theme: Props["theme"]) => css`
@@ -56,9 +55,6 @@ const Nav: VFC<Props> = ({ theme }) => {
           );
         })}
       </ul>
-      <LinkButton theme={theme} to="/book-a-demo">
-        Book a demo
-      </LinkButton>
     </nav>
   );
 };
