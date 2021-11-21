@@ -49,6 +49,7 @@ const Layout: FC = ({ children }) => {
 
           body {
             font-family: "Open Sans", Helvetica, sans-serif;
+            overflow-x: hidden;
           }
         `}
       />

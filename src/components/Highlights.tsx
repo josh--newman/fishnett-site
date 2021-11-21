@@ -16,12 +16,23 @@ const containerStyles = css`
   max-width: var(--max-page-width);
   margin: 0 auto;
   display: flex;
+  gap: 20px;
+  flex-direction: column;
   border-bottom: 1px solid var(--light-gray);
+
+  @media (min-width: 35em) {
+    flex-direction: row;
+  }
 `;
 
 const highlightStyles = css`
   display: flex;
   align-items: center;
+
+  img {
+    width: 65px;
+    height: 65px;
+  }
 `;
 
 interface HighlightProps {

@@ -37,9 +37,9 @@ const Header: VFC<Props> = ({ theme }) => {
         <HeaderLogo theme={theme} />
         <div css={navContainerStyles}>
           <Nav theme={theme} />
-          <LinkButton theme={theme} to="/book-a-demo">
+          {/* <LinkButton theme={theme} to="/book-a-demo">
             Book a demo
-          </LinkButton>
+          </LinkButton> */}
         </div>
       </div>
     </header>

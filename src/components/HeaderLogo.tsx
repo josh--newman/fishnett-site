@@ -14,10 +14,21 @@ const wrapperStyles = (theme: Props["theme"]) => css`
       color: ${theme === "light" ? "var(--dark-blue)" : "var(--white)"};
     }
   }
+
+  img {
+    display: none;
+  }
+
+  @media (min-width: 900px) {
+    img {
+      display: block;
+    }
+  }
 `;
 
 const logoContainerStyles = (theme: Props["theme"]) => css`
   display: flex;
+  gap: 10px;
   align-items: center;
 
   img {
@@ -45,7 +56,6 @@ const HeaderLogo: VFC<Props> = ({ theme }) => {
       <Link to="/">
         <div css={logoContainerStyles(theme)}>
           <img width="100px" src={boatImg} alt="fishnett logo" />
-          <Spacer width={10} />
           <span css={logoTextStyles}>FishNett</span>
         </div>
       </Link>
