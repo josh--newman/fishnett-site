@@ -75,12 +75,13 @@ const menuText = css`
 `;
 
 const menuToggleStyles = (isOpen: boolean) => css`
+  cursor: pointer;
   display: none;
 
   @media (max-width: 770px) {
     display: block;
     position: absolute;
-    background: url(${isOpen ? menuCloseIcon : menuIcon});
+    background: url("${isOpen ? menuCloseIcon : menuIcon}");
     background-repeat: no-repeat;
     width: 35px;
     border: 0;
