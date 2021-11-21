@@ -18,8 +18,10 @@ const containerStyles = css`
 
 const gridContainer = css`
   display: grid;
+  align-items: center;
   grid-column-gap: 50px;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-row-gap: 50px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 `;
 
 const itemContainer = css`
@@ -29,6 +31,7 @@ const itemContainer = css`
 
   img {
     width: 100%;
+    height: auto;
   }
 `;
 
@@ -79,9 +82,10 @@ const Testimonials: VFC = () => {
         </Text>
         <Spacer height={50} />
         <div css={gridContainer}>
-          {testimonialData.map((item) => {
+          {testimonialData.map((item, i) => {
             return (
               <Testimonial
+                key={i}
                 photoSrc={item.photoSrc}
                 text={item.text}
                 name={item.name}
