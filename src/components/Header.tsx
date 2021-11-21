@@ -26,6 +26,12 @@ const navContainerStyles = css`
   width: 100%;
 `;
 
+const buttonContainerStyles = css`
+  @media (max-width: 770px) {
+    display: none;
+  }
+`;
+
 interface Props {
   theme: "light" | "dark";
 }
@@ -37,9 +43,11 @@ const Header: VFC<Props> = ({ theme }) => {
         <HeaderLogo theme={theme} />
         <div css={navContainerStyles}>
           <Nav theme={theme} />
-          {/* <LinkButton theme={theme} to="/book-a-demo">
-            Book a demo
-          </LinkButton> */}
+          <div css={buttonContainerStyles}>
+            <LinkButton theme={theme} to="/book-a-demo">
+              Book a demo
+            </LinkButton>
+          </div>
         </div>
       </div>
     </header>
