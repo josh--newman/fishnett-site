@@ -12,7 +12,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/fishnett-logo.png",
+        icon: "src/images/fishnett-logo.svg",
       },
     },
     "gatsby-plugin-sharp",
