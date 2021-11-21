@@ -1,7 +1,8 @@
 import { css } from "@emotion/react";
-import { VFC } from "react";
+import { Fragment, VFC } from "react";
 
 import LinkButton from "./LinkButton";
+import productFeatures from "./productFeatures";
 import Spacer from "./Spacer";
 import Text from "./Text";
 
@@ -27,8 +28,10 @@ const featureListStyles = css`
 `;
 
 const featureItemStyles = css`
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: fit-content;
+  padding: 0;
 
   img {
     background-color: papayawhip;
@@ -81,29 +84,19 @@ const Features: VFC = () => {
           </LinkButton>
         </div>
         <ul css={featureListStyles}>
-          <FeatureItem
-            iconUrl=""
-            title="Feature one"
-            subtitle="Some text about feature one"
-          />
-          <Spacer height={20} />
-          <FeatureItem
-            iconUrl=""
-            title="Feature two"
-            subtitle="Some text about feature two"
-          />
-          <Spacer height={20} />
-          <FeatureItem
-            iconUrl=""
-            title="Feature three"
-            subtitle="Some text about feature three"
-          />
-          <Spacer height={20} />
-          <FeatureItem
-            iconUrl=""
-            title="Feature four"
-            subtitle="Some text about feature four"
-          />
+          {productFeatures.map((feature, index) => {
+            return (
+              <Fragment>
+                <FeatureItem
+                  key={index}
+                  iconUrl=""
+                  title={feature.heading}
+                  subtitle={feature.summary}
+                />
+                <Spacer height={30} />
+              </Fragment>
+            );
+          })}
         </ul>
       </div>
     </section>

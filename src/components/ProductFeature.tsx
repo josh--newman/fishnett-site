@@ -1,47 +1,56 @@
 import { css } from "@emotion/react";
-import { ReactNode, VFC } from "react";
+import { VFC } from "react";
 
+import Spacer from "./Spacer";
 import Text from "./Text";
-import checkmark from "../images/icon-list-checkmark.svg";
 
 const wrapperStyles = css`
   width: 100%;
 `;
 
-const containerStyles = css`
+const containerStyles = (index: number) => css`
   padding: 40px;
   max-width: var(--max-page-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: ${index % 2 === 0 ? "row-reverse" : "row"};
 `;
 
 const listStyles = css`
-  list-style-image: url(${checkmark});
+  list-style-image: none;
 `;
 
 interface Props {
+  index: number;
   heading: string;
-  tagline: string;
-  details: ReactNode[];
-  imageSrc: string;
+  imgSrc: string;
+  details: string[];
 }
 
-const ProductFeature: VFC<Props> = ({
-  heading,
-  tagline,
-  details,
-  imageSrc,
-}) => {
+const ProductFeature: VFC<Props> = ({ index, heading, imgSrc, details }) => {
   return (
     <div css={wrapperStyles}>
-      <div css={containerStyles}>
-        <Text tag="h3" type="sml-heading">
-          {heading}
-        </Text>
-        {tagline}
-        <ul css={listStyles}>
-          {details.map((item) => {
-            return <li>{item}</li>;
-          })}
-        </ul>
+      <div css={containerStyles(index)}>
+        <div>
+          <Text tag="h3" type="md-heading">
+            {heading}
+          </Text>
+          <ul css={listStyles}>
+            {details.map((item) => {
+              return (
+                <li>
+                  <Text type="body" tag="p">
+                    {item}
+                  </Text>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+        <Spacer width={100} />
+        <div>
+          <img src={imgSrc} />
+        </div>
       </div>
     </div>
   );

@@ -14,6 +14,7 @@ const wrapperStyles = css`
 `;
 
 const containerStyles = css`
+  color: var(--white);
   padding: 40px;
   max-width: var(--max-page-width);
   margin: 0 auto;
