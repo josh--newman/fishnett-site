@@ -1,5 +1,4 @@
 import { css } from "@emotion/react";
-import { FC, VFC } from "react";
 import Text from "./Text";
 import Spacer from "./Spacer";
 
@@ -37,9 +36,10 @@ const highlightStyles = css`
 
 interface HighlightProps {
   iconSrc: string;
+  children: React.ReactNode;
 }
 
-const Highlight: FC<HighlightProps> = ({ children, iconSrc }) => {
+const Highlight = ({ children, iconSrc }: HighlightProps) => {
   return (
     <div css={highlightStyles}>
       <img src={iconSrc} />
@@ -51,7 +51,7 @@ const Highlight: FC<HighlightProps> = ({ children, iconSrc }) => {
   );
 };
 
-const Highlights: VFC = () => {
+const Highlights  = () => {
   return (
     <section css={wrapperStyles}>
       <div css={containerStyles}>

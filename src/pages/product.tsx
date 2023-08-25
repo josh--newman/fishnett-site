@@ -1,4 +1,3 @@
-import { VFC } from "react";
 import { Helmet } from "react-helmet";
 
 import Layout from "../components/Layout";
@@ -7,7 +6,7 @@ import ProductWelcome from "../components/ProductWelcome";
 import ProductFeature from "../components/ProductFeature";
 import productFeatures from "../components/productFeatures";
 
-const ProductPage: VFC = () => {
+const ProductPage = () => {
   return (
     <Layout>
       <Helmet>

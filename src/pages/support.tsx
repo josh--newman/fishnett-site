@@ -1,9 +1,8 @@
-import { VFC } from "react";
 import { Helmet } from "react-helmet";
 
 import Layout from "../components/Layout";
 
-const SupportPage: VFC = () => {
+const SupportPage = () => {
   return (
     <Layout>
       <Helmet>

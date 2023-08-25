@@ -1,7 +1,6 @@
-import { VFC } from "react";
 import Layout from "../components/Layout";
 
-const NotFoundPage: VFC = () => {
+const NotFoundPage = () => {
   return (
     <Layout>
       <h1>Sorry</h1>

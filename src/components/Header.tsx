@@ -1,4 +1,3 @@
-import { VFC } from "react";
 import { css } from "@emotion/react";
 
 import HeaderLogo from "./HeaderLogo";
@@ -36,7 +35,7 @@ interface Props {
   theme: "light" | "dark";
 }
 
-const Header: VFC<Props> = ({ theme }) => {
+const Header = ({ theme }: Props) => {
   return (
     <header css={headerStyles(theme)}>
       <div css={headerContentStyles}>

@@ -1,5 +1,4 @@
 import { css } from "@emotion/react";
-import { VFC } from "react";
 
 import Spacer from "./Spacer";
 import Text from "./Text";
@@ -15,7 +14,7 @@ const containerStyles = css`
   margin: 0 auto;
 `;
 
-const ProductWelcome: VFC = () => {
+const ProductWelcome = () => {
   return (
     <section css={wrapperStyles}>
       <div css={containerStyles}>

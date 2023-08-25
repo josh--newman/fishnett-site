@@ -46,6 +46,7 @@ interface Props {
     | "body"
     | "subtitle";
   tag: "h1" | "h2" | "h3" | "p";
+  children: React.ReactNode;
 }
 
 const Text: FC<Props> = ({ children, tag, type }) => {

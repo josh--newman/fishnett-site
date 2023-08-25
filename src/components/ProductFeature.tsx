@@ -1,5 +1,4 @@
 import { css } from "@emotion/react";
-import { VFC } from "react";
 
 import Spacer from "./Spacer";
 import Text from "./Text";
@@ -27,7 +26,7 @@ interface Props {
   details: string[];
 }
 
-const ProductFeature: VFC<Props> = ({ index, heading, imgSrc, details }) => {
+const ProductFeature = ({ index, heading, imgSrc, details }: Props) => {
   return (
     <div css={wrapperStyles}>
       <div css={containerStyles(index)}>

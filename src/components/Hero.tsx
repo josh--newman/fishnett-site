@@ -1,4 +1,3 @@
-import { VFC } from "react";
 import { css } from "@emotion/react";
 import Spacer from "./Spacer";
 import heroImage from "../images/hero-image.png";
@@ -41,7 +40,7 @@ const imgStyles = css`
   }
 `;
 
-const Hero: VFC = () => {
+const Hero = () => {
   return (
     <section css={wrapperStyles}>
       <div css={containerStyles}>

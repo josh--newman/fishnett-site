@@ -1,4 +1,3 @@
-import { VFC } from "react";
 import { Helmet } from "react-helmet";
 
 import Layout from "../components/Layout";
@@ -7,7 +6,7 @@ import Highlights from "../components/Highlights";
 import Testimonials from "../components/Testimonials";
 import Features from "../components/Features";
 
-const IndexPage: VFC = () => {
+const IndexPage = () => {
   return (
     <Layout>
       <Helmet>

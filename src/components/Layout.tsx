@@ -1,4 +1,4 @@
-import { Fragment, FC } from "react";
+import { Fragment } from "react";
 import { Global, css } from "@emotion/react";
 import "@fontsource/open-sans/400.css";
 import "@fontsource/open-sans/700.css";
@@ -13,7 +13,11 @@ const pageContainerStyles = css`
   align-items: center;
 `;
 
-const Layout: FC = ({ children }) => {
+interface Props {
+  children: React.ReactNode;
+}
+
+const Layout = ({ children }: Props) => {
   return (
     <Fragment>
       <Global

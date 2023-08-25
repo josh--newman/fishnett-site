@@ -1,5 +1,4 @@
 import { css } from "@emotion/react";
-import { VFC } from "react";
 import { Link } from "gatsby";
 
 import navItems from "./navItems";
@@ -46,7 +45,7 @@ const navStyles = css`
   }
 `;
 
-const Footer: VFC = () => {
+const Footer = () => {
   return (
     <footer css={wrapperStyles}>
       <div css={containerStyles}>

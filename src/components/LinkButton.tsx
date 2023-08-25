@@ -1,5 +1,4 @@
 import { css } from "@emotion/react";
-import { FC } from "react";
 import { Link } from "gatsby";
 
 const bookDemoStyles = (theme: Props["theme"]) => css`
@@ -36,9 +35,10 @@ const bookDemoStyles = (theme: Props["theme"]) => css`
 interface Props {
   to: string;
   theme: "light" | "dark";
+  children: React.ReactNode;
 }
 
-const LinkButton: FC<Props> = ({ children, to, theme }) => {
+const LinkButton = ({ children, to, theme }: Props) => {
   return (
     <div role="button" tabIndex={-1} css={bookDemoStyles(theme)}>
       <Link to={to}>{children}</Link>

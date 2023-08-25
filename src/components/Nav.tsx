@@ -1,4 +1,4 @@
-import { Fragment, useState, VFC } from "react";
+import { Fragment, useState } from "react";
 import { css } from "@emotion/react";
 import { Link } from "gatsby";
 
@@ -92,7 +92,7 @@ const menuToggleStyles = (isOpen: boolean) => css`
   }
 `;
 
-const Nav: VFC<Props> = ({ theme }) => {
+const Nav = ({ theme }: Props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (

@@ -1,4 +1,3 @@
-import { VFC } from "react";
 import { css } from "@emotion/react";
 import { Link } from "gatsby";
 
@@ -49,7 +48,7 @@ interface Props {
   theme: "light" | "dark";
 }
 
-const HeaderLogo: VFC<Props> = ({ theme }) => {
+const HeaderLogo = ({ theme }: Props) => {
   return (
     <div css={wrapperStyles(theme)}>
       <Link to="/">

@@ -1,5 +1,5 @@
 import { css } from "@emotion/react";
-import { Fragment, VFC } from "react";
+import { Fragment } from "react";
 
 import LinkButton from "./LinkButton";
 import productFeatures from "./productFeatures";
@@ -47,7 +47,7 @@ interface FeatureItemProps {
   subtitle: string;
 }
 
-const FeatureItem: VFC<FeatureItemProps> = ({ iconUrl, title, subtitle }) => {
+const FeatureItem = ({ iconUrl, title, subtitle }: FeatureItemProps) => {
   return (
     <li css={featureItemStyles}>
       <img src={iconUrl} />
@@ -64,7 +64,7 @@ const FeatureItem: VFC<FeatureItemProps> = ({ iconUrl, title, subtitle }) => {
   );
 };
 
-const Features: VFC = () => {
+const Features = () => {
   return (
     <section css={wrapperStyles}>
       <div css={containerStyles}>
