@@ -82,6 +82,11 @@ const Testimonials: VFC = () => {
         <Text type="md-heading" tag="h2">
           Loved by the fishing industry Australia wide
         </Text>
+        <Spacer height={15} />
+        <Text type="xs-heading" tag="h3">
+          Fully endorsed by Sydney Fish Market, the largest seafood market in
+          the southern hemisphere.
+        </Text>
         <Spacer height={50} />
         <div css={gridContainer}>
           {testimonialData.map((item, i) => {
