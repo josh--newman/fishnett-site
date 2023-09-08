@@ -36,7 +36,7 @@ const Header = ({ theme }: Props) => {
         <HeaderLogo theme={theme} />
         <div css={navContainerStyles}>
           <LinkButton theme={theme} to="/book-a-demo">
-            Book a demo
+            Contact us
           </LinkButton>
         </div>
       </div>

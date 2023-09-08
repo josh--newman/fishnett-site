@@ -46,10 +46,10 @@ const Hero = () => {
       <div css={containerStyles}>
         <div css={heroTextStyles}>
           <Text type="xs-heading" tag="h3">
-            Automate federal & state compliance reporting
+            Streamline your business
           </Text>
           <Text type="lg-heading" tag="h1">
-            Streamlining the modern fishing industry
+            A simple management system for the commercial seafood industry
           </Text>
           <Text type="body" tag="p">
             FishNett can create an entire week’s recipient created tax invoices,
@@ -57,10 +57,7 @@ const Hero = () => {
           </Text>
           <div css={buttonContainerStyles}>
             <LinkButton theme="dark" to="/book-a-demo">
-              Book a demo
-            </LinkButton>
-            <LinkButton theme="dark" to="/product">
-              Learn more
+              Contact us
             </LinkButton>
           </div>
         </div>

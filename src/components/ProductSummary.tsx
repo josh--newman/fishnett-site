@@ -45,7 +45,7 @@ const ProductSummary = () => {
           </div>
           <Spacer height={40} />
           <LinkButton theme="light" to="/contact">
-            Book a demo
+            Contact us
           </LinkButton>
         </div>
         <div css={imageStyles}>
