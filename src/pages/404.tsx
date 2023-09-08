@@ -3,7 +3,7 @@ import Layout from "../components/Layout";
 const NotFoundPage = () => {
   return (
     <Layout>
-      <h1>Sorry</h1>
+      <h1>Sorry. This page cannot be found.</h1>
     </Layout>
   );
 };

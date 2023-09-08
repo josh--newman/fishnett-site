@@ -7,6 +7,8 @@ import testimonialData from "./data";
 
 const wrapperStyles = css`
   width: 100%;
+  background-color: var(--dark-blue);
+  color: var(--white);
 `;
 
 const containerStyles = css`

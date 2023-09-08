@@ -21,14 +21,8 @@ const headerContentStyles = css`
 const navContainerStyles = css`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   width: 100%;
-`;
-
-const buttonContainerStyles = css`
-  @media (max-width: 770px) {
-    display: none;
-  }
 `;
 
 interface Props {
@@ -41,12 +35,9 @@ const Header = ({ theme }: Props) => {
       <div css={headerContentStyles}>
         <HeaderLogo theme={theme} />
         <div css={navContainerStyles}>
-          <Nav theme={theme} />
-          <div css={buttonContainerStyles}>
-            <LinkButton theme={theme} to="/book-a-demo">
-              Book a demo
-            </LinkButton>
-          </div>
+          <LinkButton theme={theme} to="/book-a-demo">
+            Book a demo
+          </LinkButton>
         </div>
       </div>
     </header>

@@ -49,28 +49,11 @@ const Footer = () => {
   return (
     <footer css={wrapperStyles}>
       <div css={containerStyles}>
-        <div>
-          <HeaderLogo theme="dark" />
-          <Spacer height={10} />
-          <Text tag="p" type="subtitle">
-            Copyright © {new Date().getFullYear()} Productive Office Australia
-          </Text>
-        </div>
-        <div>
-          <Text tag="h3" type="xs-heading">
-            Quick links
-          </Text>
-          <Spacer height={20} />
-          <ul css={navStyles}>
-            {navItems.map((item) => {
-              return (
-                <li>
-                  <Link to={item.to}>{item.title}</Link>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
+        <HeaderLogo theme="dark" />
+        <Spacer height={10} />
+        <Text tag="p" type="subtitle">
+          Copyright © {new Date().getFullYear()} Productive Office Australia
+        </Text>
       </div>
     </footer>
   );
