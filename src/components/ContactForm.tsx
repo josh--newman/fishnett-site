@@ -21,14 +21,19 @@ const containerStyles = css`
   flex-direction: row;
   justify-content: space-around;
 
-  @media (max-width: 700px) {
+  @media (max-width: 900px) {
     flex-direction: column;
   }
 `;
 
 const introStyles = css`
-  text-align: left;
+  margin: 0 auto;
   max-width: 400px;
+  text-align: left;
+
+  @media (max-width: 900px) {
+    text-align: center;
+  }
 `;
 
 const formStyles = css`

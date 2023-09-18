@@ -13,6 +13,15 @@ const containerStyles = (index: number) => css`
   margin: 0 auto;
   display: flex;
   flex-direction: ${index % 2 === 0 ? "row-reverse" : "row"};
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+    text-align: center;
+
+    ul {
+      text-align: left;
+    }
+  }
 `;
 
 const listStyles = css`

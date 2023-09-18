@@ -16,7 +16,7 @@ const containerStyles = css`
   max-width: var(--max-page-width);
   margin: 0 auto;
 
-  @media (min-width: 35em) {
+  @media (min-width: 900px) {
     flex-direction: row;
   }
 `;
@@ -34,6 +34,8 @@ const buttonContainerStyles = css`
 `;
 
 const imgStyles = css`
+  height: 100%;
+  width: 100%;
   img {
     width: 100%;
     height: auto;
@@ -57,6 +59,7 @@ const Hero = () => {
               Contact us
             </LinkButton>
           </div>
+          <Spacer height={10} />
         </div>
         <Spacer width={30} />
         <div css={imgStyles}>
