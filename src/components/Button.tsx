@@ -1,5 +1,4 @@
 import { css } from "@emotion/react";
-import { Link } from "gatsby";
 
 const buttonStyles = (theme: Props["theme"]) => css`
   border: 1px solid ${theme === "light" ? "var(--dark-blue)" : "var(--white)"};
@@ -10,6 +9,8 @@ const buttonStyles = (theme: Props["theme"]) => css`
   min-width: 150px;
   width: fit-content;
   text-align: center;
+  width: 100%;
+  padding: 20px;
 
   :hover {
     background-color: ${theme === "light"
@@ -18,32 +19,21 @@ const buttonStyles = (theme: Props["theme"]) => css`
     color: ${theme === "light" ? "var(--white)" : "var(--dark-blue)"};
     filter: ${theme === "light" ? "brightness(85%)" : "none"};
   }
-
-  a {
-    display: block;
-    padding: 10px 20px;
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-    :link,
-    :visited {
-      color: inherit;
-    }
-  }
 `;
 
 interface Props {
-  to: string;
+  type: "button" | "submit" | "reset";
+  disabled?: boolean;
   theme: "light" | "dark";
   children: React.ReactNode;
 }
 
-const LinkButton = ({ children, to, theme }: Props) => {
+const Button = ({ children, disabled = false, theme, type }: Props) => {
   return (
-    <div role="button" tabIndex={-1} css={buttonStyles(theme)}>
-      <Link to={to}>{children}</Link>
-    </div>
+    <button type={type} disabled={disabled} css={buttonStyles(theme)}>
+      {children}
+    </button>
   );
 };
 
-export default LinkButton;
+export default Button;

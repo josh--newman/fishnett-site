@@ -38,6 +38,7 @@ const tagStyles = (type: Props["type"]) => {
 };
 
 interface Props {
+  id?: string;
   type:
     | "lg-heading"
     | "md-heading"
@@ -49,10 +50,14 @@ interface Props {
   children: React.ReactNode;
 }
 
-const Text: FC<Props> = ({ children, tag, type }) => {
+const Text: FC<Props> = ({ id, children, tag, type }) => {
   const Tag = tag;
 
-  return <Tag css={tagStyles(type)}>{children}</Tag>;
+  return (
+    <Tag id={id} css={tagStyles(type)}>
+      {children}
+    </Tag>
+  );
 };
 
 export default Text;

@@ -44,7 +44,7 @@ const ProductSummary = () => {
             </Text>
           </div>
           <Spacer height={40} />
-          <LinkButton theme="light" to="/contact">
+          <LinkButton theme="light" to="#contact">
             Contact us
           </LinkButton>
         </div>

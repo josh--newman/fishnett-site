@@ -56,7 +56,7 @@ const Hero = () => {
             for all your suppliers, in just 30 minutes.
           </Text>
           <div css={buttonContainerStyles}>
-            <LinkButton theme="dark" to="/book-a-demo">
+            <LinkButton theme="dark" to="#contact">
               Contact us
             </LinkButton>
           </div>

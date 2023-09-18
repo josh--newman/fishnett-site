@@ -34,7 +34,7 @@ const IndexPage = () => {
           />
         );
       })}
-      {/* <ContactForm /> */}
+      <ContactForm />
       <Testimonials />
     </Layout>
   );
