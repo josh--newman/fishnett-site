@@ -74,7 +74,7 @@ const Features = () => {
           </Text>
           <Spacer height={20} />
           <Text type="body" tag="p">
-            Fishnett simplifies your operational overhead by streamlining the
+            FishNett simplifies your operational overhead by streamlining the
             catch capturing process and automating the generation of invoices
             and reports.
           </Text>

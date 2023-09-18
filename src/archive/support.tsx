@@ -7,8 +7,8 @@ const SupportPage = () => {
     <Layout>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Fishnett | Support</title>
-        <link rel="canonical" href="https://fishnett.co/support" />
+        <title>FishNett | Support</title>
+        <link rel="canonical" href="https://fishnett.com.au/support" />
       </Helmet>
       <h1>Support</h1>
     </Layout>

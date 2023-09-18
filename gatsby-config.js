@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: "Fishnett",
-    siteUrl: "https://fishnett.co",
+    title: "FishNett",
+    siteUrl: "https://fishnett.com.au",
   },
   plugins: [
     "gatsby-plugin-emotion",

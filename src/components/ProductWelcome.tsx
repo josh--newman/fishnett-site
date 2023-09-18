@@ -19,7 +19,7 @@ const ProductWelcome = () => {
     <section css={wrapperStyles}>
       <div css={containerStyles}>
         <Text type="lg-heading" tag="h2">
-          Welcome to Fishnett
+          Welcome to FishNett
         </Text>
         <Spacer height={20} />
         <div style={{ maxWidth: "700px", margin: "0 auto" }}>

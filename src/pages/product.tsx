@@ -8,8 +8,8 @@ const ProductPage = () => {
     <Layout>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Fishnett | Product</title>
-        <link rel="canonical" href="https://fishnett.co/product" />
+        <title>FishNett | Product</title>
+        <link rel="canonical" href="https://fishnett.com.au/product" />
       </Helmet>
       <section
         css={css`
