@@ -46,7 +46,6 @@ const productFeatures = [
     details: [
       "Implement Barcode Traceability and uphold Chain of Custody standards.",
       "Generate detailed compliance reports for State and Commonwealth Fisheries in minutes.",
-      "Marine Stewardship Council compliance.",
       "Ensure compliance with Food Standards Australia New Zealand (FSANZ) regulations",
       "Develop and produce Australian Institute for Food Safety reports, adhering to Standard 3.2.2A.",
     ],
