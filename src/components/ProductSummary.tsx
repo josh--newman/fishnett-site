@@ -34,13 +34,16 @@ const ProductSummary = () => {
         <div>
           <Spacer height={30} />
           <Text tag="h1" type="lg-heading">
-            Speed up your invoicing & reporting
+            Welcome to FishNett
           </Text>
           <Spacer height={20} />
           <div css={textStyles}>
             <Text tag="p" type="body">
-              FishNett can create an entire week’s recipient created tax
-              invoices, for all your suppliers, in just 30 minutes.
+              We know that keeping track of all the receipts, reports,
+              compliance checks, dispatch and sales that go on in a fish co-op
+              can be challenging. FishNett allows co-ops of any size to manage
+              all their processes and data quickly, efficiently and in one
+              place.
             </Text>
           </div>
           <Spacer height={40} />

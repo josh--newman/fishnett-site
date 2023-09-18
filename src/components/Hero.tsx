@@ -49,11 +49,8 @@ const Hero = () => {
             Streamline your operations
           </Text>
           <Text type="lg-heading" tag="h1">
-            A simple management system for the commercial seafood industry
-          </Text>
-          <Text type="body" tag="p">
-            FishNett can create an entire week’s recipient created tax invoices,
-            for all your suppliers, in just 30 minutes.
+            Innovative solutions for a more profitable and sustainable Seafood
+            Industry
           </Text>
           <div css={buttonContainerStyles}>
             <LinkButton theme="dark" to="#contact">

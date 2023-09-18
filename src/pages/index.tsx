@@ -22,7 +22,6 @@ const IndexPage = () => {
       <Hero />
       <Highlights />
       <ProductSummary />
-      <ProductWelcome />
       {productFeatures.map((feature, index) => {
         return (
           <ProductFeature
