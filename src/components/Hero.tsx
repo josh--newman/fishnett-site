@@ -46,7 +46,7 @@ const Hero = () => {
       <div css={containerStyles}>
         <div css={heroTextStyles}>
           <Text type="xs-heading" tag="h3">
-            Streamline your business
+            Streamline your operations
           </Text>
           <Text type="lg-heading" tag="h1">
             A simple management system for the commercial seafood industry

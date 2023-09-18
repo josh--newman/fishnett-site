@@ -1,7 +1,6 @@
 import { css } from "@emotion/react";
 
 import HeaderLogo from "./HeaderLogo";
-import Nav from "./Nav";
 import LinkButton from "./LinkButton";
 
 const headerStyles = (theme: Props["theme"]) => css`

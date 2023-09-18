@@ -9,6 +9,7 @@ import ProductSummary from "../components/ProductSummary";
 import ProductWelcome from "../components/ProductWelcome";
 import ProductFeature from "../components/ProductFeature";
 import productFeatures from "../components/productFeatures";
+import ContactForm from "../components/ContactForm";
 
 const IndexPage = () => {
   return (
@@ -33,6 +34,7 @@ const IndexPage = () => {
           />
         );
       })}
+      {/* <ContactForm /> */}
       <Testimonials />
     </Layout>
   );

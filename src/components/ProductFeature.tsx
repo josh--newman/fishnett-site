@@ -37,7 +37,7 @@ const ProductFeature = ({ index, heading, imgSrc, details }: Props) => {
           <ul css={listStyles}>
             {details.map((item) => {
               return (
-                <li>
+                <li key={item}>
                   <Text type="body" tag="p">
                     {item}
                   </Text>
