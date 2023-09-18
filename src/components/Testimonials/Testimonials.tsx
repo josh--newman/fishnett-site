@@ -5,6 +5,12 @@ import Spacer from "../Spacer";
 import Text from "../Text";
 import testimonialData from "./data";
 
+import ballina from "../../images/customers/ballina.png";
+import bermagui from "../../images/customers/bermagui.png";
+import commercialFishCoop from "../../images/customers/commercial.png";
+import ulladulla from "../../images/customers/ulladulla.png";
+import wallis from "../../images/customers/wallis.png";
+
 const wrapperStyles = css`
   width: 100%;
   background-color: var(--dark-blue);
@@ -21,8 +27,8 @@ const containerStyles = css`
 const gridContainer = css`
   display: grid;
   align-items: center;
-  grid-column-gap: 50px;
-  grid-row-gap: 50px;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 `;
 
@@ -31,6 +37,14 @@ const itemContainer = css`
   flex-direction: column;
   text-align: left;
 
+  img {
+    width: 100%;
+    height: auto;
+  }
+`;
+
+const customerImageStyles = css`
+  max-width: 150px;
   img {
     width: 100%;
     height: auto;
@@ -74,6 +88,14 @@ const Testimonial: VFC<TestimonialProps> = ({
   );
 };
 
+const customerImages = [
+  { src: ballina, alt: "Ballina Fishermen’s Co-op" },
+  { src: bermagui, alt: "Bermagui Fishermen’s Co-op" },
+  { src: commercialFishCoop, alt: "Commercial Fishermen’s Co-op" },
+  { src: ulladulla, alt: "Ulladulla Fishermen’s Co-op" },
+  { src: wallis, alt: "Wallis Lake Fishermen’s Co-op" },
+];
+
 const Testimonials: VFC = () => {
   return (
     <section css={wrapperStyles}>
@@ -89,16 +111,16 @@ const Testimonials: VFC = () => {
         </Text>
         <Spacer height={50} />
         <div css={gridContainer}>
-          {testimonialData.map((item, i) => {
+          {customerImages.map((item) => {
             return (
-              <Testimonial
-                key={i}
-                photoSrc={item.photoSrc}
-                text={item.text}
-                name={item.name}
-                role={item.role}
-                company={item.company}
-              />
+              <div css={customerImageStyles}>
+                <img
+                  style={{ backgroundColor: "lightgray" }}
+                  height={350}
+                  src={item.src}
+                  alt={item.alt}
+                />
+              </div>
             );
           })}
         </div>
