@@ -9,7 +9,7 @@ const MobilePage = () => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>FishNett | Mobile</title>
-        <link rel="canonical" href="https://fishnett.com.au/product" />
+        <link rel="canonical" href="https://fishnett.com.au/mobile" />
       </Helmet>
       <section
         css={css`
