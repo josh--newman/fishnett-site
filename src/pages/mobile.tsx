@@ -3,12 +3,12 @@ import { Helmet } from "react-helmet";
 
 import Layout from "../components/Layout";
 
-const ProductPage = () => {
+const MobilePage = () => {
   return (
     <Layout>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>FishNett | Product</title>
+        <title>FishNett | Mobile</title>
         <link rel="canonical" href="https://fishnett.com.au/product" />
       </Helmet>
       <section
@@ -22,4 +22,4 @@ const ProductPage = () => {
   );
 };
 
-export default ProductPage;
+export default MobilePage;
