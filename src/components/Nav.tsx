@@ -14,7 +14,7 @@ const containerStyles = css`
 `;
 
 const navStyles = (theme: Props["theme"], isOpen: boolean) => css`
-  color: ${theme === "light" ? "var(--dark-blue)" : "var(--white)"};
+  color: ${theme === "light" ? "var(--fn-blue)" : "var(--light-cream)"};
   display: flex;
   list-style: none;
   margin: 0;
@@ -23,7 +23,7 @@ const navStyles = (theme: Props["theme"], isOpen: boolean) => css`
   @media (max-width: 770px) {
     z-index: 1000;
     font-size: 1.2rem;
-    color: var(--white);
+    color: var(--light-cream);
     position: fixed;
     inset: 0 0 0 30%;
     flex-direction: column;
@@ -70,7 +70,7 @@ const menuText = css`
   height: 1px;
   overflow: hidden;
   position: absolute;
-  white-space: nowrap;
+  light-cream-space: nowrap;
   width: Fra1px;
 `;
 

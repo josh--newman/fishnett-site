@@ -8,8 +8,8 @@ const FORM_ENDPOINT = process.env.GATSBY_FORM_URL || "";
 
 const wrapperStyles = css`
   width: 100%;
-  background-color: var(--dark-blue);
-  color: var(--white);
+  background-color: var(--fn-blue);
+  color: var(--light-cream);
 `;
 
 const containerStyles = css`

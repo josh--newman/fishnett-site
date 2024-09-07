@@ -4,12 +4,12 @@ import { Link } from "gatsby";
 import boatImg from "../images/fishnett-logo.svg";
 
 const wrapperStyles = (theme: Props["theme"]) => css`
-  color: ${theme === "light" ? "var(--dark-blue)" : "var(--white)"};
+  color: ${theme === "light" ? "var(--fn-blue)" : "var(--light-cream)"};
   a {
     text-decoration: none;
     :link,
     :visited {
-      color: ${theme === "light" ? "var(--dark-blue)" : "var(--white)"};
+      color: ${theme === "light" ? "var(--fn-blue)" : "var(--light-cream)"};
     }
   }
 
@@ -31,8 +31,8 @@ const logoContainerStyles = (theme: Props["theme"]) => css`
 
   img {
     filter: ${theme === "light"
-      ? "invert(18%) sepia(35%) saturate(1302%) hue-rotate(161deg) brightness(90%) contrast(88%)"
-      : "invert(100%) sepia(0%) saturate(7500%) hue-rotate(72deg) brightness(99%) contrast(99%)"};
+      ? "invert(32%) sepia(51%) saturate(582%) hue-rotate(148deg) brightness(96%) contrast(88%)"
+      : "invert(93%) sepia(8%) saturate(154%) hue-rotate(329deg) brightness(105%) contrast(92%)"};
   }
 `;
 

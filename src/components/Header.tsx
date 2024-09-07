@@ -5,7 +5,9 @@ import LinkButton from "./LinkButton";
 
 const headerStyles = (theme: Props["theme"]) => css`
   width: 100%;
-  background-color: ${theme === "light" ? "var(--white)" : "var(--dark-blue)"};
+  background-color: ${theme === "light"
+    ? "var(--light-cream)"
+    : "var(--fn-blue)"};
   min-height: 100px;
   padding: 20px;
 `;

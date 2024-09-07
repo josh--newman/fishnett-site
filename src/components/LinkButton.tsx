@@ -2,9 +2,10 @@ import { css } from "@emotion/react";
 import { Link } from "gatsby";
 
 const buttonStyles = (theme: Props["theme"]) => css`
-  border: 1px solid ${theme === "light" ? "var(--dark-blue)" : "var(--white)"};
-  background-color: var(--dark-blue);
-  color: var(--white);
+  border: 1px solid
+    ${theme === "light" ? "var(--fn-blue)" : "var(--light-cream)"};
+  background-color: var(--fn-blue);
+  color: var(--light-cream);
   border-radius: 5px;
   cursor: pointer;
   min-width: 150px;
@@ -13,9 +14,9 @@ const buttonStyles = (theme: Props["theme"]) => css`
 
   :hover {
     background-color: ${theme === "light"
-      ? "var(--dark-blue)"
-      : "var(--white)"};
-    color: ${theme === "light" ? "var(--white)" : "var(--dark-blue)"};
+      ? "var(--fn-blue)"
+      : "var(--light-cream)"};
+    color: ${theme === "light" ? "var(--light-cream)" : "var(--fn-blue)"};
     filter: ${theme === "light" ? "brightness(85%)" : "none"};
   }
 

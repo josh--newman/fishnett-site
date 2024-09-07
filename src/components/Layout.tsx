@@ -28,6 +28,8 @@ const Layout = ({ children }: Props) => {
             --white: #ffffff;
             --light-gray: #c4c4c4;
             --dark-gray: #2c2c2c;
+            --light-cream: #f5ede5;
+            --fn-blue: #266a7f;
           }
 
           *,
@@ -54,6 +56,7 @@ const Layout = ({ children }: Props) => {
           body {
             font-family: "Open Sans", Helvetica, sans-serif;
             overflow-x: hidden;
+            background-color: var(--light-cream);
           }
         `}
       />

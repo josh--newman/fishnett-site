@@ -13,8 +13,8 @@ import wallis from "../../images/customers/wallis.png";
 
 const wrapperStyles = css`
   width: 100%;
-  background-color: var(--dark-blue);
-  color: var(--white);
+  background-color: var(--fn-blue);
+  color: var(--light-cream);
 `;
 
 const containerStyles = css`

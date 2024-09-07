@@ -9,11 +9,11 @@ import Text from "./Text";
 const wrapperStyles = css`
   width: 100%;
   background-color: var(--dark-gray);
-  color: var(--white);
+  color: var(--light-cream);
 `;
 
 const containerStyles = css`
-  color: var(--white);
+  color: var(--light-cream);
   padding: 40px;
   max-width: var(--max-page-width);
   margin: 0 auto;
@@ -35,7 +35,7 @@ const navStyles = css`
       text-decoration: none;
       :link,
       :visited {
-        color: var(--white);
+        color: var(--light-cream);
       }
       :focus,
       :hover {

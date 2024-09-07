@@ -8,14 +8,14 @@ import Text from "./Text";
 
 const wrapperStyles = css`
   width: 100%;
-  background-color: var(--dark-blue);
+  background-color: var(--fn-blue);
 `;
 
 const containerStyles = css`
   padding: 40px;
   max-width: var(--max-page-width);
   margin: 0 auto;
-  color: var(--white);
+  color: var(--light-cream);
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 50px;

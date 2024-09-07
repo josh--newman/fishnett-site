@@ -5,7 +5,7 @@ import Text from "../components/Text";
 import LinkButton from "./LinkButton";
 
 const wrapperStyles = css`
-  background-color: var(--dark-blue);
+  background-color: var(--fn-blue);
   width: 100%;
 `;
 
@@ -22,7 +22,7 @@ const containerStyles = css`
 `;
 
 const heroTextStyles = css`
-  color: var(--white);
+  color: var(--light-cream);
   display: flex;
   flex-direction: column;
   gap: 20px;
