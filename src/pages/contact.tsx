@@ -2,8 +2,9 @@ import { css } from "@emotion/react";
 import { Helmet } from "react-helmet";
 
 import Layout from "../components/Layout";
+import ContactForm from "../components/ContactForm";
 
-const MobilePage = () => {
+const ContactPage = () => {
   return (
     <Layout>
       <Helmet>
@@ -11,15 +12,12 @@ const MobilePage = () => {
         <title>FishNett | Contact</title>
         <link rel="canonical" href="https://fishnett.com.au/contact" />
       </Helmet>
-      <section
-        css={css`
-          padding: 40px;
-        `}
-      >
-        <body></body>
-      </section>
+
+      <body>
+        <ContactForm />
+      </body>
     </Layout>
   );
 };
 
-export default MobilePage;
+export default ContactPage;

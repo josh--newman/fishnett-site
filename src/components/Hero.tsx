@@ -55,7 +55,7 @@ const Hero = () => {
             Industry
           </Text>
           <div css={buttonContainerStyles}>
-            <LinkButton theme="dark" to="#contact">
+            <LinkButton theme="dark" to="/contact">
               Contact us
             </LinkButton>
           </div>

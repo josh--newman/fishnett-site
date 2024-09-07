@@ -7,7 +7,6 @@ import Testimonials from "../components/Testimonials";
 import ProductSummary from "../components/ProductSummary";
 import ProductFeature from "../components/ProductFeature";
 import productFeatures from "../components/productFeatures";
-import ContactForm from "../components/ContactForm";
 
 const IndexPage = () => {
   return (
@@ -31,7 +30,6 @@ const IndexPage = () => {
           />
         );
       })}
-      <ContactForm />
       <Testimonials />
     </Layout>
   );

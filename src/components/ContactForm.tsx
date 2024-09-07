@@ -8,8 +8,8 @@ const FORM_ENDPOINT = process.env.GATSBY_FORM_URL || "";
 
 const wrapperStyles = css`
   width: 100%;
-  background-color: var(--fn-blue);
-  color: var(--light-cream);
+  background-color: var(--light-cream);
+  color: var(--fn-blue);
 `;
 
 const containerStyles = css`
@@ -18,12 +18,9 @@ const containerStyles = css`
   margin: 0 auto;
   text-align: center;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  gap: 20px;
   justify-content: space-around;
-
-  @media (max-width: 900px) {
-    flex-direction: column;
-  }
 `;
 
 const introStyles = css`
@@ -39,7 +36,6 @@ const introStyles = css`
 const formStyles = css`
   max-width: 500px;
   width: 100%;
-  padding: 10px;
   margin: 0 auto;
 
   label {
