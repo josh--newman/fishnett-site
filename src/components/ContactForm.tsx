@@ -7,7 +7,6 @@ import Button from "./Button";
 import Text from "./Text";
 
 const FORM_ENDPOINT = process.env.GATSBY_FORM_URL || "";
-const jsConfetti = new JSConfetti();
 
 const wrapperStyles = css`
   width: 100%;
@@ -73,6 +72,7 @@ const ContactForm = () => {
 
   useEffect(() => {
     if (formState.status === "success") {
+      const jsConfetti = new JSConfetti();
       jsConfetti.addConfetti({
         emojis: ["🐟", "🐠", "🐡"],
       });
