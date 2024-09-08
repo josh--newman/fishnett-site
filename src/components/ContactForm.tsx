@@ -81,70 +81,64 @@ const ContactForm = () => {
               : "Thanks for your interest in FishNett! Fill out your details here and we'll be in touch soon."}
           </Text>
         </div>
-        <form
-          action={FORM_ENDPOINT}
-          onSubmit={getFormSubmitHandler()}
-          css={formStyles}
-          method="POST"
-          accept-charset="UTF-8"
-        >
-          <label>
-            Name (required)
-            <input type="text" name="name" required />
-          </label>
-
-          <label>
-            Email (required)
-            <input type="email" name="email" required />
-          </label>
-
-          <label>
-            Organisation
-            <input type="text" name="organisation" />
-          </label>
-
-          <label>
-            Phone
-            <input type="tel" name="phone" />
-          </label>
-
-          <label>
-            Inquiry
-            <textarea rows={10} name="inquiry" />
-          </label>
-
-          {/* Hidden field to prevent spam */}
-          <div
-            style={{
-              textIndent: "-99999px",
-              whiteSpace: "nowrap",
-              overflow: "hidden",
-              position: "absolute",
-            }}
-            aria-hidden="true"
+        {formState.status === "success" ? null : (
+          <form
+            action={FORM_ENDPOINT}
+            onSubmit={getFormSubmitHandler()}
+            css={formStyles}
+            method="POST"
+            accept-charset="UTF-8"
           >
-            <input
-              type="text"
-              name="_gotcha"
-              tabIndex={-1}
-              autoComplete="off"
-            />
-          </div>
+            <label>
+              Name (required)
+              <input type="text" name="name" required />
+            </label>
 
-          <Button
-            disabled={isLoading || formState.status === "success"}
-            type="submit"
-            theme="dark"
-          >
-            <Text type="body" tag="p">
-              {isLoading
-                ? "Submitting"
-                : formState.status === "success"
-                ? "Success!"
-                : "Submit"}
-            </Text>
-          </Button>
-        </form>
+            <label>
+              Email (required)
+              <input type="email" name="email" required />
+            </label>
+
+            <label>
+              Organisation
+              <input type="text" name="organisation" />
+            </label>
+
+            <label>
+              Phone
+              <input type="tel" name="phone" />
+            </label>
+
+            <label>
+              Inquiry
+              <textarea rows={10} name="inquiry" />
+            </label>
+
+            {/* Hidden field to prevent spam */}
+            <div
+              style={{
+                textIndent: "-99999px",
+                whiteSpace: "nowrap",
+                overflow: "hidden",
+                position: "absolute",
+              }}
+              aria-hidden="true"
+            >
+              <input
+                type="text"
+                name="_gotcha"
+                tabIndex={-1}
+                autoComplete="off"
+              />
+            </div>
+
+            <Button disabled={isLoading} type="submit" theme="dark">
+              <Text type="body" tag="p">
+                {isLoading ? "Submitting" : "Submit"}
+              </Text>
+            </Button>
+          </form>
+        )}
       </div>
     </section>
   );
