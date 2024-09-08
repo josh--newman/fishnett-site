@@ -11,6 +11,7 @@ const pageContainerStyles = css`
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-height: 100vh;
 `;
 
 interface Props {
@@ -57,6 +58,7 @@ const Layout = ({ children }: Props) => {
             font-family: "Open Sans", Helvetica, sans-serif;
             overflow-x: hidden;
             background-color: var(--light-cream);
+            flex-grow: 1;
           }
         `}
       />

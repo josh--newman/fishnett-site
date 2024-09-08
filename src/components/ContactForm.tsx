@@ -1,10 +1,13 @@
 import { css } from "@emotion/react";
+import { useEffect } from "react";
 import { useFormData } from "herotofu-react";
+import JSConfetti from "js-confetti";
 
 import Button from "./Button";
 import Text from "./Text";
 
 const FORM_ENDPOINT = process.env.GATSBY_FORM_URL || "";
+const jsConfetti = new JSConfetti();
 
 const wrapperStyles = css`
   width: 100%;
@@ -67,6 +70,14 @@ const ContactForm = () => {
       : null;
 
   const isLoading = formState.status === "loading";
+
+  useEffect(() => {
+    if (formState.status === "success") {
+      jsConfetti.addConfetti({
+        emojis: ["🐟", "🐠", "🐡"],
+      });
+    }
+  }, [formState.status]);
 
   return (
     <section css={wrapperStyles}>
