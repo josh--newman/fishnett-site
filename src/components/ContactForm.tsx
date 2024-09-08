@@ -1,8 +1,8 @@
 import { css } from "@emotion/react";
+import { useFormData } from "herotofu-react";
 
 import Button from "./Button";
 import Text from "./Text";
-import useForm from "./useForm";
 
 const FORM_ENDPOINT = process.env.GATSBY_FORM_URL || "";
 
@@ -57,13 +57,16 @@ const formStyles = css`
 `;
 
 const ContactForm = () => {
-  const additionalData = {
-    sent: new Date().toISOString(),
-  };
+  const { formState, getFormSubmitHandler } = useFormData(FORM_ENDPOINT);
 
-  const { handleSubmit, status, message } = useForm({ additionalData });
+  const message =
+    formState.status === "success"
+      ? "Success! Thanks for reaching out. We'll be in touch soon."
+      : formState.status === "error"
+      ? "Oops! Something went wrong. Please try again."
+      : null;
 
-  const isLoading = status === "loading";
+  const isLoading = formState.status === "loading";
 
   return (
     <section css={wrapperStyles}>
@@ -75,12 +78,12 @@ const ContactForm = () => {
           <Text type="body" tag="p">
             {message
               ? message
-              : "Have a question? Want to book a demo? We'd love to hear from you! Fill out your details here and we'll be in touch soon."}
+              : "Thanks for your interest in FishNett! Fill out your details here and we'll be in touch soon."}
           </Text>
         </div>
         <form
           action={FORM_ENDPOINT}
-          onSubmit={handleSubmit}
+          onSubmit={getFormSubmitHandler()}
           css={formStyles}
           method="POST"
           accept-charset="UTF-8"
@@ -91,13 +94,13 @@ const ContactForm = () => {
           </label>
 
           <label>
-            Organisation (required)
-            <input type="text" name="organisation" required />
+            Email (required)
+            <input type="email" name="email" required />
           </label>
 
           <label>
-            Email (required)
-            <input type="email" name="email" required />
+            Organisation
+            <input type="text" name="organisation" />
           </label>
 
           <label>
@@ -110,11 +113,33 @@ const ContactForm = () => {
             <textarea rows={10} name="inquiry" />
           </label>
 
-          <Button disabled={isLoading} type="submit" theme="dark">
+          {/* Hidden field to prevent spam */}
+          <div
+            style={{
+              textIndent: "-99999px",
+              whiteSpace: "nowrap",
+              overflow: "hidden",
+              position: "absolute",
+            }}
+            aria-hidden="true"
+          >
+            <input
+              type="text"
+              name="_gotcha"
+              tabIndex={-1}
+              autoComplete="off"
+            />
+          </div>
+
+          <Button
+            disabled={isLoading || formState.status === "success"}
+            type="submit"
+            theme="dark"
+          >
             <Text type="body" tag="p">
               {isLoading
                 ? "Submitting"
-                : status === "success"
+                : formState.status === "success"
                 ? "Success!"
                 : "Submit"}
             </Text>

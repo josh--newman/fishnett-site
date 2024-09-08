@@ -18,6 +18,8 @@ const buttonStyles = (theme: Props["theme"]) => css`
       ? "var(--fn-blue)"
       : "var(--light-cream)"};
     color: ${theme === "light" ? "var(--light-cream)" : "var(--fn-blue)"};
+    border: 1px solid
+      ${theme === "light" ? "var(--light-cream)" : "var(--fn-blue)"};
     filter: ${theme === "light" ? "brightness(85%)" : "none"};
   }
 `;
